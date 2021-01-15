@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/jamborski-dev/diet-app/static/css/main.dc1d37a3.chunk.css",
-    "main.js": "/jamborski-dev/diet-app/static/js/main.24ab6bd0.chunk.js",
-    "main.js.map": "/jamborski-dev/diet-app/static/js/main.24ab6bd0.chunk.js.map",
-    "runtime-main.js": "/jamborski-dev/diet-app/static/js/runtime-main.707f62fc.js",
-    "runtime-main.js.map": "/jamborski-dev/diet-app/static/js/runtime-main.707f62fc.js.map",
-    "static/js/2.2481c38b.chunk.js": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js",
-    "static/js/2.2481c38b.chunk.js.map": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js.map",
-    "index.html": "/jamborski-dev/diet-app/index.html",
-    "static/css/main.dc1d37a3.chunk.css.map": "/jamborski-dev/diet-app/static/css/main.dc1d37a3.chunk.css.map",
-    "static/js/2.2481c38b.chunk.js.LICENSE.txt": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js.LICENSE.txt",
-    "static/media/avocado.9ea01784.svg": "/jamborski-dev/diet-app/static/media/avocado.9ea01784.svg"
+    "main.css": "/diet-app/static/css/main.dc1d37a3.chunk.css",
+    "main.js": "/diet-app/static/js/main.24ab6bd0.chunk.js",
+    "main.js.map": "/diet-app/static/js/main.24ab6bd0.chunk.js.map",
+    "runtime-main.js": "/diet-app/static/js/runtime-main.3dd0e293.js",
+    "runtime-main.js.map": "/diet-app/static/js/runtime-main.3dd0e293.js.map",
+    "static/js/2.665e0cd4.chunk.js": "/diet-app/static/js/2.665e0cd4.chunk.js",
+    "static/js/2.665e0cd4.chunk.js.map": "/diet-app/static/js/2.665e0cd4.chunk.js.map",
+    "index.html": "/diet-app/index.html",
+    "static/css/main.dc1d37a3.chunk.css.map": "/diet-app/static/css/main.dc1d37a3.chunk.css.map",
+    "static/js/2.665e0cd4.chunk.js.LICENSE.txt": "/diet-app/static/js/2.665e0cd4.chunk.js.LICENSE.txt",
+    "static/media/avocado.9ea01784.svg": "/diet-app/static/media/avocado.9ea01784.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.707f62fc.js",
-    "static/js/2.2481c38b.chunk.js",
+    "static/js/runtime-main.3dd0e293.js",
+    "static/js/2.665e0cd4.chunk.js",
     "static/css/main.dc1d37a3.chunk.css",
     "static/js/main.24ab6bd0.chunk.js"
   ]
