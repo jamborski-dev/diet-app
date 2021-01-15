@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jamborski-dev/diet-app/static/css/main.dc1d37a3.chunk.css",
+    "main.js": "/jamborski-dev/diet-app/static/js/main.24ab6bd0.chunk.js",
+    "main.js.map": "/jamborski-dev/diet-app/static/js/main.24ab6bd0.chunk.js.map",
+    "runtime-main.js": "/jamborski-dev/diet-app/static/js/runtime-main.707f62fc.js",
+    "runtime-main.js.map": "/jamborski-dev/diet-app/static/js/runtime-main.707f62fc.js.map",
+    "static/js/2.2481c38b.chunk.js": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js",
+    "static/js/2.2481c38b.chunk.js.map": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js.map",
+    "index.html": "/jamborski-dev/diet-app/index.html",
+    "static/css/main.dc1d37a3.chunk.css.map": "/jamborski-dev/diet-app/static/css/main.dc1d37a3.chunk.css.map",
+    "static/js/2.2481c38b.chunk.js.LICENSE.txt": "/jamborski-dev/diet-app/static/js/2.2481c38b.chunk.js.LICENSE.txt",
+    "static/media/avocado.9ea01784.svg": "/jamborski-dev/diet-app/static/media/avocado.9ea01784.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.707f62fc.js",
+    "static/js/2.2481c38b.chunk.js",
+    "static/css/main.dc1d37a3.chunk.css",
+    "static/js/main.24ab6bd0.chunk.js"
+  ]
+}
