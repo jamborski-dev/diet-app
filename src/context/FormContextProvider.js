@@ -12,11 +12,11 @@ export const FormContextProvider = ({ children }) => {
   
   const DEFAULT_STATE = {
     info: {
-      age: 27,
-      sex: 'male',
-      weight: 80,
+      age: 0,
+      sex: '',
+      weight: 0,
       weightUnit: 'kg',
-      height: 178,
+      height: 0,
       heightUnit: 'cm',
       activity: 0,
     },
@@ -102,7 +102,7 @@ export const FormContextProvider = ({ children }) => {
         height !== 0 && 
         activity !== 0) {
 
-      // TODO check if unit have to be converted
+      // unit convertion to KG & CM
       let weightInKg; 
       let heightInCm; 
       if (weightUnit === 'kg') weightInKg = weight
@@ -114,7 +114,6 @@ export const FormContextProvider = ({ children }) => {
       if (sex === 'male') newBmr = 10 * weightInKg + 6.25 * heightInCm - 5 * age + 5
       if (sex === 'female') newBmr = 10 * weightInKg + 6.25 * heightInCm - 5 * age - 161 
       
-
       setState(prevState => ({ 
         ...prevState, result: {
           ...prevState.result, 
@@ -143,10 +142,11 @@ export const FormContextProvider = ({ children }) => {
     setState(prevState => ({
       ...prevState,
       macros: {
-        proteins, fats, carbs
+        protein: proteins, 
+        fat: fats, 
+        carb: carbs
       }
     }))
-    console.log(state.macros)
   }
 
   return (

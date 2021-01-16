@@ -40,6 +40,7 @@ export const LogoBg = styled.div`
   justify-content: flex-end;
   padding-left: 2rem;
   padding-right: 1.4rem;
+  margin-right: 1rem;
 `
 
 export const Menu = styled.nav`

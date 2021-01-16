@@ -33,15 +33,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-grad-dark);
-  background: linear-gradient(#21243D, #3A406E);
-  color: var(--text-primary-light);
+  background-color: #fff;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6rem;
   margin-bottom: 2rem;
+  max-width: 65ch;
 }
 
 circle {

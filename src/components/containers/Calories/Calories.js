@@ -11,9 +11,10 @@ const Calories = () => {
 
   return (
     <CardBox>
+        <span>Daily Calorie Goal</span>
         <FlexBox direction="row" justify="space-between" align="baseline">
           <span>
-            <CardHeader big noBottomMargin>BMR</CardHeader>
+            <CardHeader big noBottomMargin marginTop>BMR</CardHeader>
             <span>Basic Metabolic Rate</span>
           </span>
           <span>

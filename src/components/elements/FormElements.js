@@ -6,8 +6,7 @@ export const FormBox = styled.div`
   background: var(--bg-light);
   color: var(--text-secondary-dark);
   border-radius: 0.35rem;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 700px;
   margin-bottom: 3rem;
   padding: 2rem;
 `
@@ -23,7 +22,7 @@ export const FormRow = styled(FlexBox)`
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  line-height: 3rem;
+  line-height: 1.3rem;
   border-bottom: 1px solid #d6d6d6;
 
   &:last-child {
@@ -39,12 +38,12 @@ export const FormGroup = styled.div`
 
 export const FormLabel = styled.label`
   font-size: 1rem;
-  width: 30%;
+  width: 40%;
   text-align: left;
   margin-right: 1rem;
 `
 export const FormInputBox = styled.div`
-  width: 70%;
+  width: 60%;
 `
 export const FormInput = styled.input`
   font-size: 1.2rem;

@@ -8,12 +8,14 @@ export const MainGrid = styled.div`
   padding: 0;
   margin: 0;
 
-  display: grid;
+  display: block;
+
+  /* display: grid;
   grid-template-rows: var(--navbar-height) calc(auto - var(--navbar-height)) 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
     "navbar navbar navbar"
     "col_left col_mid col_right"
-    "content content content";
+    "content content content"; */
 
 `

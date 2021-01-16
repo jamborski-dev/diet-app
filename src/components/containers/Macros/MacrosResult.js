@@ -5,7 +5,8 @@ import dietSchema from '../../../utils/dietSchema'
 // elements
 import ProgressRing from '../../elements/ProgressRing'
 import { FlexBox } from '../../elements/FlexBox'
-import { CardBox, CardHeader } from '../../elements/CardElements.js'
+import { TextStyle } from '../../elements/Typography'
+import { CardBox, CardHeader, Description } from '../../elements/CardElements.js'
 
 // hooks
 import useForm from '../../../hooks/useForm'
@@ -45,22 +46,42 @@ const Procentage = styled.span`
   transform: translate(-50%, -50%);
 `
 
-const Macro = ({ value, name, info, color }) => {
-  
+const Macro = ({ macroKey, name, color }) => {
+  const { 
+    state: {
+      dietType,
+      macros,
+      result: {
+        tee
+      }
+    } 
+  } = useForm()
+
+  const macroItem = macros[macroKey]
+  const macroValue = macroItem ? parseInt(macroItem.replace('%', '')) : 0
+  const progressValue = macroValue === 0 ? 1 : macroValue
+  const teePart = tee !== 0 && macroValue !== 0 ? (tee * macroValue / 100).toFixed(0) : '-'
+  const grams = tee !== 0 && macroValue !== 0 ? (teePart / (macroKey === 'fat' ? 9 : 4)).toFixed(0) : '-'
+
   return (
     <MacroItem color={color}>
       <Circle>
         <ProgressRing
           radius={ 60 }
           stroke={ 8 }
-          progress={ value }
+          progress={ progressValue }
           color={color}
         />
-        <Procentage>{value}%</Procentage>
+        <Procentage>{macroValue}%</Procentage>
       </Circle>
       <FlexBox direction="column" justify="flex-start" align="left">
         <MacroName>{name}</MacroName>
-        <MacroInfo>{info}</MacroInfo>  
+        {dietType !== '' &&
+          <MacroInfo>
+            <TextStyle color={color}>{grams} g</TextStyle> of <TextStyle bold>{name.toLowerCase()}</TextStyle> is equal to <TextStyle color={color}>{teePart} kcal</TextStyle> 
+
+            </MacroInfo>  
+        }
       </FlexBox>         
     </MacroItem>
   )
@@ -69,21 +90,25 @@ const Macro = ({ value, name, info, color }) => {
 const MacroResult = () => {
   const { 
     state: {
-      dietType, 
-      macros: {
-        protein, fat, carb
-      } 
+      dietType
     } 
   } = useForm()
-  const title  = dietSchema[dietType].name
+
+  const title = dietType !== '' ? dietSchema[dietType].name : '-'
+  
 
 
 
   return (
     <CardBox>
       <FlexBox direction="column" justify="flex-start" align="left">
-        <span>Your macro for</span>
-        <CardHeader>{title ? title : '-'}</CardHeader>
+        <span>Macronutrients breakdown</span>
+        <CardHeader>{title}</CardHeader>
+        {dietType !== '' &&
+          <Description>
+            {dietSchema[dietType].description}
+          </Description>
+        }
       </FlexBox>
 
       <MacroList>
@@ -91,20 +116,17 @@ const MacroResult = () => {
         <Macro
           color={colors.accent.green} 
           name="Carbohydrates"
-          value={carb}
-          info="Up to 20g/day. Avoid!"        
+          macroKey="carb"
         />
         <Macro
           color={colors.accent.orange} 
           name="Proteins"
-          value={protein}
-          info="Products red meat, beans, eggs."        
+          macroKey="protein"
         />
         <Macro
           color={colors.accent.pink} 
           name="Fats"
-          value={fat}
-          info="Products like avocado, eggs, bacon."        
+          macroKey="fat"
         />
       </MacroList>
     </CardBox>

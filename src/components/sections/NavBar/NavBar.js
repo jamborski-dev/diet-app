@@ -34,14 +34,14 @@ function NavBar() {
             </LogoTitle>
           </FlexBox>
         </LogoBg>
-        <Menu>
+        {/* <Menu>
           <MenuList>
             <MenuItem>Home</MenuItem>
             <MenuItem active>Calculator</MenuItem>
             <MenuItem>Knowledge</MenuItem>
             <MenuItem>About</MenuItem>
           </MenuList>
-        </Menu>
+        </Menu> */}
       </FlexBox>
       <Button>Login</Button>
     </FlexBox>

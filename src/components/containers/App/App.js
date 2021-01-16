@@ -17,33 +17,30 @@ import Content from '../../sections/Content/Content'
 // elements
 import { MainGrid } from '../../elements/MainGrid'
 import { Column } from '../../elements/Column'
-import { H2 } from '../../elements/Headers'
+import { H2 } from '../../elements/Typography'
+import { Section } from '../../elements/Section'
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <MainGrid>
-        <NavBar />
-        <FormContextProvider>
-          <Top>
-            <Column count={3}>
+        <Top>
+          <NavBar />
+          <FormContextProvider>
+            <Section>
               <H2>Nutritional Calculator</H2>
-              <p>Once you provide all data, calculator will give you detailed information about your calorie goals.</p>
+              <p>Once you provide all the data, calculator will give you detailed information about your calorie goals.</p>
               <p>Than, you can choose from few suggested diet types, to see a full breakdown of marco nutrients and meals suggestions. Also, you can set your own macros procentages.</p>
-              <Calories />
-            </Column>
-            <Column count={3}>
               <Form />
-            </Column>
-            <Column count={3}>
+              <Calories />
               <MacroResult />
-            </Column>
-          </Top>
-          <Content>
-            Content
-          </Content>
-        </FormContextProvider>
+            </Section>
+          </FormContextProvider>
+        </Top>
+        <Content>
+          Content
+        </Content>
       </MainGrid>
     </>
   );
