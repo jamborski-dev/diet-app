@@ -9,16 +9,16 @@ Nutritional Calculator and Dietary Advice - App written in `React`. Initialised 
 
 ### Todo
 
-[x] Refactor to use `colorScheme` object instead `CSS Custom Properties`
-[] Use `draw.io` file to define folder structure convention
+- [x] Refactor to use `colorScheme` object instead `CSS Custom Properties`
+- [ ] Use `draw.io` file to define folder structure convention
   - A. `Elements` - styled components only / partials,
   - B. `Pages` - main menu components pages
   - C. `Containers` - components with busines logic + single styled component defining container box
   - D. `Layout` - ???
-[] Implement `Open Food API` for recepies suggestions
-[] Refactor Layout (Try out Figma), mobile first 
-[] Authentication using Single Sign On with 0Auth
-[] Refactor to TypeScript
-[] Implement Markdown for Blog Posts and Knoledge section
-[] Decouple Back End for User managment - ???
-[] React Native app for scanning barcodes
+- [ ] Implement `Open Food API` for recepies suggestions
+- [ ] Refactor Layout (Try out Figma), mobile first 
+- [ ] Authentication using Single Sign On with 0Auth
+- [ ] Refactor to TypeScript
+- [ ] Implement Markdown for Blog Posts and Knoledge section
+- [ ] Decouple Back End for User managment - ???
+- [ ] React Native app for scanning barcodes
