@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colorScheme from '../../styles/colorScheme'
 
 export const NavBarBox = styled.div`
   padding: 0;
@@ -20,18 +21,18 @@ export const LogoText = styled.h1`
   font-weight: 700;
   line-height: 1.6rem;
   margin: 0;
-  color: var(--bg-grad-dark);
+  color: ${colorScheme.text.headerDark};
 `
 
 export const LogoTitle = styled.span`
   display: inline;
   font-size: .8rem;
   font-weight: 300;
-  color: var(--bg-grad-dark);
+  color: ${colorScheme.text.headerDark};
 `
 
 export const LogoBg = styled.div`
-  background: #fff;
+  background: ${colorScheme.bg.light};
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   height: 60px;
@@ -45,7 +46,7 @@ export const LogoBg = styled.div`
 
 export const Menu = styled.nav`
   font-size: .9rem;
-  color: #fff;
+  color: ${colorScheme.text.light};
 `
 
 export const MenuList = styled.ul`
@@ -68,6 +69,6 @@ export const MenuItem = styled.li`
     height: 2px;
     left: -10%;
     bottom: -7px;
-    background: ${props => props.active ? 'var(--accent-green)' : 'none' };
+    background: ${({ active }) => active ? colorScheme.accent.green : 'none' };
   }
 `

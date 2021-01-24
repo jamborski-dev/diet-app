@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import colors from '../../../styles/colors'
+import colorScheme from '../../../styles/colorScheme'
 
 const ContentSection = styled.section`
   grid-area: content;
-  background: ${colors.bg.white};
-  color: ${colors.typography.textDark};
+  background: ${colorScheme.bg.light};
+  color: ${colorScheme.text.dark};
   padding: 2rem;
   margin-top: -1rem;
   margin-left: 2rem;

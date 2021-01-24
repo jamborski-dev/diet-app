@@ -1,22 +1,26 @@
 import styled from 'styled-components'
-import colors from '../../styles/colors'
+import colorScheme from '../../styles/colorScheme'
 
 export const CardBox = styled.div`
-  background: ${colors.bg.cardDarkNavy};
+  background: ${colorScheme.bg.cardDark};
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
-  max-width: 700px;
+  max-width: 500px;
+
+  @media (min-width: 590px) {
+    width: 500px;
+  }
 `
 
 export const CardHeader = styled.h5`
   color: #fff;
-  font-size: ${props => props.big ? '2rem' : '1.5rem'};
-  margin-top: ${props => props.marginTop ? '2rem' : '0'};
-  margin-bottom: ${props => props.noBottomMargin ? '0' : '1rem'};
+  font-size: ${({ big }) => big ? '2rem' : '1.5rem'};
+  margin-top: ${({ marginTop }) => marginTop ? '2rem' : '0'};
+  margin-bottom: ${({ noBottomMargin }) => noBottomMargin ? '0' : '1rem'};
 `
 export const Description = styled.span`
-  color: ${colors.typography.textBlue};
+  color: ${colorScheme.text.accentBlue};
   font-size: .8rem;
   /* margin-top: 1rem; */
   margin-bottom: 1rem;

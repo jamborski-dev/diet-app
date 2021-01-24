@@ -1,18 +1,18 @@
 import styled from 'styled-components'
+import colorScheme from '../../styles/colorScheme'
 import { FlexBox } from './FlexBox'
-import colors from '../../styles/colors'
 
 export const FormBox = styled.div`
-  background: var(--bg-light);
-  color: var(--text-secondary-dark);
+  background: ${colorScheme.bg.light};
+  color: ${colorScheme.text.dark};
   border-radius: 0.35rem;
-  max-width: 700px;
+  width: min(100%, 500px);
   margin-bottom: 3rem;
   padding: 2rem;
 `
 
 export const FormHeader = styled.h3`
-  color: ${colors.typography.headerDark};
+  color: ${colorScheme.text.headerDark};
   font-size: 1.3rem;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -23,7 +23,9 @@ export const FormRow = styled(FlexBox)`
   justify-content: center;
   align-items: baseline;
   line-height: 1.3rem;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom-width: 1px; 
+  border-bottom-style: solid;
+  border-bottom-color: ${colorScheme.accent.inputSeparator};
 
   &:last-child {
     margin-bottom: 1rem;
@@ -48,12 +50,12 @@ export const FormInputBox = styled.div`
 export const FormInput = styled.input`
   font-size: 1.2rem;
   font-size: 'Montserrat';
-  color: #7c7c7c;
+  color: ${colorScheme.text.input};
   padding: 0.5rem;
   text-align: left;
   border: none;
   
-  width: ${props => props.inputWidth === null ? '100%' : `${props.inputWidth}%` };
+  width: ${({ inputWidth }) => inputWidth === null ? '100%' : `${inputWidth}%` };
   
   & > option {
     text-align: right;

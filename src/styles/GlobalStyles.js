@@ -40,7 +40,7 @@ p {
   font-size: 1rem;
   line-height: 1.6rem;
   margin-bottom: 2rem;
-  max-width: 65ch;
+  max-width: min(500px, 65ch);
 }
 
 circle {

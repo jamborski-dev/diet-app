@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FlexBox = styled.div`
   display: flex;
-  flex-direction: ${props => props.direction};
-  justify-content: ${props => props.justify};
-  align-items: ${props => props.align};
+  flex-direction: ${({ direction }) => direction};
+  justify-content: ${({ justify }) => justify};
+  align-items: ${({ align }) => align};
 `

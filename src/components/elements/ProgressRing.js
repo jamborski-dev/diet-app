@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 const RingBox = styled.div`
   position: relative;
-  width: ${props => props.boxSize}px;
-  height: ${props => props.boxSize}px;
+  width: ${({ boxSize }) => boxSize}px;
+  height: ${({ boxSize }) => boxSize}px;
 `
 
 const InnerRing = styled.circle`
@@ -14,13 +14,13 @@ const InnerRing = styled.circle`
 `
 const OuterRing = styled.circle`
   position: absolute;
-  stroke: ${props => props.ringColor};
+  stroke: ${({ ringColor }) => ringColor};
   stroke-linecap: round;
 `
 
 const Glow = styled.circle`
   position: absolute;
-  stroke: ${props => props.ringColor};
+  stroke: ${({ ringColor }) => ringColor};
   stroke-linecap: round;
   filter: 'url(#blur)';
   opacity: 1;

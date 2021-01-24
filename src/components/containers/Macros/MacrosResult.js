@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../../styles/colors'
+import colorScheme from '../../../styles/colorScheme'
 import dietSchema from '../../../utils/dietSchema'
 
 // elements
@@ -12,7 +12,6 @@ import { CardBox, CardHeader, Description } from '../../elements/CardElements.js
 import useForm from '../../../hooks/useForm'
 
 const Circle = styled.div`
-  /* border: 2px solid red; */
   position: relative;
 `
 const MacroList = styled.ul`
@@ -26,7 +25,7 @@ const MacroItem = styled.li`
   flex-direction: row;
   align-items: center;
   margin-bottom: 1rem;
-  color: ${props => props.color};  
+  color: ${({ color }) => color};  
 `
 const MacroName = styled.span`
   font-size: 1.3rem;
@@ -34,7 +33,7 @@ const MacroName = styled.span`
   margin-bottom: 3px;
 `
 const MacroInfo = styled.span`
-  color: #fff;
+  color: ${colorScheme.text.textLight};
   font-size: 0.9rem;
 `
 const Procentage = styled.span`
@@ -114,17 +113,17 @@ const MacroResult = () => {
       <MacroList>
 
         <Macro
-          color={colors.accent.green} 
+          color={colorScheme.accent.green} 
           name="Carbohydrates"
           macroKey="carb"
         />
         <Macro
-          color={colors.accent.orange} 
+          color={colorScheme.accent.orange} 
           name="Proteins"
           macroKey="protein"
         />
         <Macro
-          color={colors.accent.pink} 
+          color={colorScheme.accent.pink} 
           name="Fats"
           macroKey="fat"
         />

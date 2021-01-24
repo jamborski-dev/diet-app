@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import colorScheme from '../../styles/colorScheme'
 
 export const TextStyle = styled.span`
-  font-weight: ${props => props.bold ? 600 : 400};
-  color: ${props => props.color ? props.color : 'inherit'};
+  font-weight: ${({ bold }) => bold ? 600 : 400};
+  color: ${({ color }) => color ? color : 'inherit'};
 `
 
 export const H2 = styled.h2`
@@ -21,6 +22,6 @@ export const H2 = styled.h2`
     bottom: -10px;
     content: " ";
     border-radius: 5px;
-    background: var(--accent-green);
+    background: ${colorScheme.accent.green};
   }
 `

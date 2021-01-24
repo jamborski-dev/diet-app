@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import colorScheme from '../../../styles/colorScheme'
 
 const TopSection = styled.section`
   /* grid-area: 2 / 1 / span 1 / span 3;
   display: flex; */
 
-  background: linear-gradient(#21243D, #3A406E);
-  color: var(--text-primary-light);
+  background: ${`linear-gradient(${colorScheme.bg.gradStart}, ${colorScheme.bg.gradStart})` };
+  color: ${colorScheme.text.light};
 `
 
 const Top = ({ children }) => {
