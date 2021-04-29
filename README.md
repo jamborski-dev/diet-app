@@ -2,10 +2,15 @@
 
 Nutritional Calculator and Dietary Advice - App written in `React`. Initialised with `Create React App`, using `React Context API` and `Styled Components`.
 
-## Knowledge
+The current version's demo to see [here](https://jamborski-dev.github.io/diet-app/).
+
+
+### Research from
 
 [Nutrition Basics](https://mynutrition.wsu.edu/nutrition-basics)
+
 [BMR Formula](https://www.thejakartapost.com/life/2016/09/27/how-to-calculate-your-ideal-calorie-intake.html)
+
 
 ### Todo
 
@@ -19,6 +24,6 @@ Nutritional Calculator and Dietary Advice - App written in `React`. Initialised 
 - [ ] Refactor Layout (Try out Figma), mobile first 
 - [ ] Authentication using Single Sign On with 0Auth
 - [ ] Refactor to TypeScript
-- [ ] Implement Markdown for Blog Posts and Knoledge section
+- [ ] Implement Markdown for Blog Posts and Knowledge section
 - [ ] Decouple Back End for User managment - ???
 - [ ] React Native app for scanning barcodes
